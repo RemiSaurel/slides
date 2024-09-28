@@ -187,20 +187,23 @@ layout: default
 </div>
 
 ---
-layout: two-cols-header
+layout: default
 ---
 
 # 👋 Merci à tous
 
-::left::
+N'hésitez pas à venir échanger pour en savoir plus sur le projet !\
+\
+Discord : @remisaurel
 
-### 🚀 Tester `memoire`
-
-<img src='/assets/qr-code.png' width='340'/>
-
-::right::
-
-### ✍️ Rejoindre le Discord
-
-<img src='/assets/qr-code-discord.png' width='340'/>
+<div class='flex justify-center gap-24 mt-12'>
+  <div class='flex flex-col gap-1'>
+    🚀 Tester l'app
+    <img src='/assets/qr-code.png' width='270'/>
+  </div>
+  <div class='flex flex-col gap-1'>
+    ✍️ Rejoindre le Discord
+    <img src='/assets/qr-code-discord.png' width='270'/>
+  </div>
+</div>
 
