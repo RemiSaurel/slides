@@ -31,7 +31,7 @@ layout: image-right
 transition: slide-left
 ---
 
-# memoire, c'est quoi ?
+# `memoire`, c'est quoi ?
 
 <ul class='text-xl'>
   <li v-click>🃏 Application web de flashcards</li>
@@ -133,27 +133,74 @@ layout: content
 ---
 layout: default
 ---
-# Du coup faut faire quoi ?
+# 🤯 Plusieurs sujets disponibles
 
-### Pleins de choses
-Genre ?
-### Encore plus
+<div class='grid grid-cols-2 gap-4 pt-6'>
+  <ProjectCard v-click>
+    <template #title>
+      <span>Gamification</span>
+    </template>
+    <template #tags>
+      <Tag v-for='tag in ["Design", "Dev", "Archi"]' :key='tag' :content='tag' />
+    </template>
+    <template #description>
+      <span>Basé sur les recommendations de la recherche : ajout de badges, gestion d'amis, expérience de révision, etc.</span>
+    </template>
+  </ProjectCard>
+  <ProjectCard v-click>
+    <template #title>
+      <span>LLM & création de contenu auto.</span>
+    </template>
+    <template #tags>
+      <Tag v-for='tag in ["IA", "Dev", "Design"]' :key='tag' :content='tag' />
+    </template>
+    <template #description>
+      <span>Utilisation de LLM et IA (<code>Mistral</code>++) pour générer des flashcards (avec un agent ?)</span>
+    </template>
+  </ProjectCard>
+  <ProjectCard v-click>
+    <template #title>
+      <span>Prototype app mobile</span>
+    </template>
+    <template #tags>
+      <Tag v-for='tag in ["Dev", "Design", "Mobile"]' :key='tag' :content='tag' />
+    </template>
+    <template #description>
+      <span>Prototype app mobile natif : Swift / Kotlin, développement <span class='italic'>isolé</span> (API facilement utilisable)</span>
+    </template>
+  </ProjectCard>
+  <ProjectCard v-click>
+    <template #title>
+      <span>Divers</span>
+    </template>
+    <template #tags>
+      <Tag v-for='tag in ["Dev", "Archi", "Design"]' :key='tag' :content='tag' />
+    </template>
+    <template #description>
+      <span>Création de contenu, Gestion d'échéances, Gestion de l'import, Mode collaboratif (multijoueur)</span>
+    </template>
+  </ProjectCard>
+</div>
 
 <div class='absolute bottom-2 right-4 text-sm'>
   <SlideCurrentNo />
 </div>
 
 ---
-layout: two-cols
+layout: two-cols-header
 ---
 
-# 🚀 Tester `memoire`
+# 👋 Merci à tous
+
+::left::
+
+### 🚀 Tester `memoire`
 
 <img src='/assets/qr-code.png' width='340'/>
 
 ::right::
 
-# 👋 Rejoindre le Discord
+### ✍️ Rejoindre le Discord
 
 <img src='/assets/qr-code-discord.png' width='340'/>
 
