@@ -49,7 +49,7 @@ transition: slide-left
 NOTES
 -->
 ---
-layout: content
+layout: default
 transition: slide-left
 ---
 # 🏭 Architecture globale
@@ -83,8 +83,7 @@ transition: slide-left
   <SlideCurrentNo />
 </div>
 ---
-layout: content
-
+layout: default
 ---
 
 # 🤖 Technologies
@@ -130,6 +129,9 @@ layout: content
 <div class='absolute bottom-2 right-4 text-sm'>
   <SlideCurrentNo />
 </div>
+<!-- 
+Technos récentes mais suffisamment stable pour des projets sur le moyen-long terme mais aussi pour le marché du travail. 
+-->
 ---
 layout: default
 ---
@@ -166,7 +168,7 @@ layout: default
       <Tag v-for='tag in ["Dev", "Design", "Mobile"]' :key='tag' :content='tag' />
     </template>
     <template #description>
-      <span>Prototype app mobile natif : Swift / Kotlin, développement <span class='italic'>isolé</span> (API facilement utilisable)</span>
+      <span>Prototype app mobile : Swift / Kotlin OU React Native, développement <span class='italic'>isolé</span> (API facilement utilisable)</span>
     </template>
   </ProjectCard>
   <ProjectCard v-click>
@@ -185,6 +187,10 @@ layout: default
 <div class='absolute bottom-2 right-4 text-sm'>
   <SlideCurrentNo />
 </div>
+
+<!-- 
+NOTES
+-->
 
 ---
 layout: default
@@ -206,4 +212,3 @@ Discord : @remisaurel
     <img src='/assets/qr-code-discord.png' width='270'/>
   </div>
 </div>
-
