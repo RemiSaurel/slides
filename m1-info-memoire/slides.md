@@ -52,83 +52,54 @@ NOTES
 layout: default
 transition: slide-left
 ---
-# 🏭 Architecture globale
+# 🏭 Technos / Architecture
 
   <div v-click v-motion
-    :initial="{ x: 30, y: 250 }"
-    :enter="{ x: 30, y: 150 }"
+  class='absolute'
+    :initial="{ x: -100, y: 200 }"
+    :enter="{ x: 10, y: 200 }"
   >
-    <img src='./assets/archi/local.png' width='320'>
+    <span class='text-sm font-semibold'> UX/UI  </span>  
+    <img src='./assets/figma.svg' width='32'>
+  </div>
+  <div v-click v-motion
+     class='absolute'
+    :initial="{ x: -100, y: 300 }"
+    :enter="{ x: 10, y: 300 }"
+  >
+    <span class='text-sm font-semibold'> Gestion projet </span>  
+    <img src='./assets/linear.webp' width='48'>
+  </div>
+
+  <div v-click v-motion
+    :initial="{ x: 180, y: 250 }"
+    :enter="{ x: 180, y: 150 }"
+  >
+    <img src='./assets/archi/local.svg' width='320'>
   </div>
   <div v-click v-motion
     :initial="{ x: -50 }"
-    :enter="{ x: 30, y: -290 }"
+    :enter="{ x: 180, y: -290 }"
   >
-    <img src='./assets/archi/github.png' width='300'>
+    <img src='./assets/archi/github.svg' width='300'>
   </div>
   <div v-click v-motion
-    :initial="{ x: 900 }"
-    :enter="{ x: 330, y: -440 }"
+    :initial="{ x: 600, y: -460 }"
+    :enter="{ x: 480, y: -460 }"
   >
-    <img src='./assets/archi/dockerhub.png' width='370'>
+    <img src='./assets/archi/dockerhub.svg' width='370'>
   </div>
   <div v-click v-motion
-    :initial="{ x: 440, y: -100 }"
-    :enter="{ x: 440, y: -445 }"
+    :initial="{ x: 580, y: -300 }"
+    :enter="{ x: 580, y: -460 }"
   >
-    <img src='./assets/archi/vps.png' width='300'>
+    <img src='./assets/archi/vps.svg' width='300'>
   </div>
 
 <div class='absolute bottom-2 right-4 text-sm'>
   <SlideCurrentNo />
 </div>
----
-layout: default
----
 
-# 🤖 Technologies
-
-<div class='pt-4 flex flex-col gap-2'>
-
-  <div v-click v-motion
-    :initial="{ x: -50 }"
-    :enter="{ x: 0 }"
-  >
-    <span class='text-2xl font-semibold'> 💻 Développement </span>
-    <div class='flex items-center gap-8'> 
-      <img src='./assets/nuxt.webp' width='162'>
-      <img src='./assets/adonis.png' width='162'>
-      <img src='./assets/postgresql.png' width='102'>
-    </div> 
-  </div>
-
-  <div v-click v-motion
-    :initial="{ x: -50 }"
-    :enter="{ x: 700, y: -160 }"
-  >
-    <span class='text-2xl font-semibold'> 🎨 UX/UI </span>
-    <div class='flex items-center gap-8 py-4'> 
-      <img src='./assets/figma.svg' width='34'>
-    </div> 
-  </div>
-
-  <div v-click v-motion
-    :initial="{ x: -50 }"
-    :enter="{ x: 0, y: -100 }"
-  >
-    <span class='text-2xl font-semibold'> ⚙️ Divers </span>
-    <div class='flex items-center gap-8'> 
-      <img src='./assets/docker.png' width='122'>
-      <img src='./assets/github.png' width='122'>
-      <img src='./assets/linear.webp' width='122'>
-    </div> 
-  </div>
-
-</div>
-
-<div class='absolute bottom-2 right-4 text-sm'>
-  <SlideCurrentNo />
-</div>
 <!-- 
 Technos récentes mais suffisamment stable pour des projets sur le moyen-long terme mais aussi pour le marché du travail. 
 -->
@@ -137,8 +108,16 @@ layout: default
 ---
 # 🤯 Plusieurs sujets disponibles
 
+<div class='absolute top-3 right-3 text-[#C5C5C5] -rotate-5 '>
+  Liste non exhaustive
+  <img src='./assets/arrow.svg' width='64' class='-ml-18 -mt-4'  />
+</div>
+
 <div class='grid grid-cols-2 gap-4 pt-6'>
   <ProjectCard v-click>
+    <template #icon>
+      🎮
+    </template>
     <template #title>
       <span>Gamification</span>
     </template>
@@ -150,6 +129,9 @@ layout: default
     </template>
   </ProjectCard>
   <ProjectCard v-click>
+    <template #icon>
+      🤖
+    </template>
     <template #title>
       <span>LLM & création de contenu auto.</span>
     </template>
@@ -161,6 +143,9 @@ layout: default
     </template>
   </ProjectCard>
   <ProjectCard v-click>
+    <template #icon>
+      📱
+    </template>
     <template #title>
       <span>Prototype app mobile</span>
     </template>
@@ -168,10 +153,13 @@ layout: default
       <Tag v-for='tag in ["Dev", "Design", "Mobile"]' :key='tag' :content='tag' />
     </template>
     <template #description>
-      <span>Prototype app mobile : Swift / Kotlin OU React Native, développement <span class='italic'>isolé</span> (API facilement utilisable)</span>
+      <span>Prototype app mobile : Swift / Kotlin OU React Native, (connexion facile avec le backend / API)</span>
     </template>
   </ProjectCard>
   <ProjectCard v-click>
+    <template #icon>
+      😄
+    </template>
     <template #title>
       <span>Divers</span>
     </template>
@@ -179,7 +167,7 @@ layout: default
       <Tag v-for='tag in ["Dev", "Archi", "Design"]' :key='tag' :content='tag' />
     </template>
     <template #description>
-      <span>Création de contenu, Gestion d'échéances, Gestion de l'import, Mode collaboratif (multijoueur)</span>
+      <span>Création de contenu, gestion d'échéances, gestion de l'import, mode collaboratif (multijoueur)</span>
     </template>
   </ProjectCard>
 </div>
@@ -200,7 +188,13 @@ layout: default
 
 N'hésitez pas à venir échanger pour en savoir plus sur le projet !\
 \
-Discord : @remisaurel
+Discord : @remisaurel\
+Mail : saurel@protonmail.com
+
+<div class='absolute bottom-3 left-3 text-[#C5C5C5] rotate-5 '>
+  <img src='./assets/arrow.svg' width='64' class='ml-18 mb-2 -rotate-60 transform scale-x-[-1]'  />
+  memoire.cloud
+</div>
 
 <div class='flex justify-center gap-24 mt-12'>
   <div class='flex flex-col gap-1'>
@@ -208,7 +202,7 @@ Discord : @remisaurel
     <img src='/assets/qr-code.png' width='270'/>
   </div>
   <div class='flex flex-col gap-1'>
-    ✍️ Rejoindre le Discord
+    <div class='flex items-center'>✍️ Rejoindre le Discord dédié à <img src='./assets/memoire.png' width='32' /></div>
     <img src='/assets/qr-code-discord.png' width='270'/>
   </div>
 </div>
