@@ -55,8 +55,9 @@ transition: slide-left
 ---
 # 🏭 Technos / Architecture
 
-  <div v-click v-motion
-     class='absolute'
+  <div v-click      
+  class='absolute'
+  v-motion
     :initial="{ x: -100, y: 200 }"
     :enter="{ x: 5, y: 200 }"
   >
@@ -64,8 +65,8 @@ transition: slide-left
     <img class='-ml-2' src='./assets/linear.webp' width='64'>
   </div>
 
-  <div v-click v-motion
-  class='absolute'
+  <div v-click class='absolute'
+   v-motion
     :initial="{ x: -100, y: 300 }"
     :enter="{ x: 10, y: 300 }"
   >
@@ -73,25 +74,29 @@ transition: slide-left
     <img class='' src='./assets/figma.svg' width='32'>
   </div>
 
-  <div v-click v-motion
+  <div v-click 
+  v-motion
     :initial="{ x: 180, y: 250 }"
     :enter="{ x: 180, y: 150 }"
   >
     <img src='./assets/archi/local.svg' width='320'>
   </div>
-  <div v-click v-motion
+  <div v-click 
+  v-motion
     :initial="{ x: -50 }"
     :enter="{ x: 180, y: -290 }"
   >
     <img src='./assets/archi/github.svg' width='300'>
   </div>
-  <div v-click v-motion
+  <div v-click 
+  v-motion
     :initial="{ x: 600, y: -460 }"
     :enter="{ x: 480, y: -460 }"
   >
     <img src='./assets/archi/dockerhub.svg' width='370'>
   </div>
-  <div v-click v-motion
+  <div v-click 
+  v-motion
     :initial="{ x: 580, y: -300 }"
     :enter="{ x: 580, y: -460 }"
   >
