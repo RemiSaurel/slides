@@ -23,7 +23,7 @@ Présentation M1 Informatique
 <div class='absolute bottom-4 right-16 text-sm'> 13 octobre 2024 </div>
 
 <!--
-Bonsoir à tous et merci pour l'invitation.
+Bonsoir à tous et merci pour l'invitation. Je vais vous présenter memoire, un projet que j'ai créé il y a plusieurs mois maintenant et qui est en constante évolution.
 -->
 
 ---
@@ -37,7 +37,7 @@ transition: slide-left
   <li v-click>🃏 Application web de flashcards</li>
   <li v-click>💻 Open Source</li>
   <li v-click>🔬 Basée sur les résultats de la recherche en EIAH</li>
-  <li v-click>😎 Des technos cool </li>
+  <li v-click>😎 Un environnement enrichissant </li>
 </ul>
 
 <img src='./assets/demo.gif' width='250' class='absolute right-16 top-8' />
@@ -45,8 +45,9 @@ transition: slide-left
 <div class='absolute bottom-2 right-4 text-sm'>
   <SlideCurrentNo />
 </div>
+
 <!--
-NOTES
+Mais du coup, memoire c'est quoi ? C'est une application web de flashcards, open source, basée sur les résultats de la recherche en Environnements Informatiques pour l'Apprentissage Humain et qui dispose d'un environnement technique enrichissant avec des technologies récentes et des sujets variés.
 -->
 ---
 layout: default
@@ -55,20 +56,21 @@ transition: slide-left
 # 🏭 Technos / Architecture
 
   <div v-click v-motion
-  class='absolute'
-    :initial="{ x: -100, y: 200 }"
-    :enter="{ x: 10, y: 200 }"
-  >
-    <span class='text-sm font-semibold'> UX/UI  </span>  
-    <img src='./assets/figma.svg' width='32'>
-  </div>
-  <div v-click v-motion
      class='absolute'
+    :initial="{ x: -100, y: 200 }"
+    :enter="{ x: 5, y: 200 }"
+  >
+    <span class='text-sm font-semibold'> Gestion projet </span>  
+    <img class='-ml-2' src='./assets/linear.webp' width='64'>
+  </div>
+
+  <div v-click v-motion
+  class='absolute'
     :initial="{ x: -100, y: 300 }"
     :enter="{ x: 10, y: 300 }"
   >
-    <span class='text-sm font-semibold'> Gestion projet </span>  
-    <img src='./assets/linear.webp' width='48'>
+    <span class='text-sm font-semibold'> UX/UI  </span>  
+    <img class='' src='./assets/figma.svg' width='32'>
   </div>
 
   <div v-click v-motion
@@ -101,7 +103,11 @@ transition: slide-left
 </div>
 
 <!-- 
-Technos récentes mais suffisamment stable pour des projets sur le moyen-long terme mais aussi pour le marché du travail. 
+memoire se base sur des technos récentes mais suffisamment stable pour créer des projets sur le moyen-long terme mais aussi pour matcher avec les demandes sur le marché du travail. Ces technos sont abordables et même si vous ne les connaissez pas, vous pourrez très rapidement monter en compétence dessus.
+Pour la gestion de projet, j'utilise Linear et pour le design, Figma.
+D'un point de vue développement et architecture, on est sur quelque chose d'assez simple mais efficace. Coté applicatif web, on a un frontend en Nuxt.js, un backend avec Adonis et une BDD PostgreSQL.
+On utilise git et Github pour le versionning, Docker pour la contenerisation et un petit serveur pour l'hébergement. Pour ceux qui seraient intéressés sur les détails techniques, on pourra en discuter après la présentation.
+L'idée derrière cette architecture est de pouvoir rapidement déployer des nouvelles fonctionnalités, de pouvoir facilement maintenir le projet mais aussi de pouvoir rapidement monter en compétence dessus. Pour ça, plusieurs sujets sont disponibles.
 -->
 ---
 layout: default
@@ -177,7 +183,11 @@ layout: default
 </div>
 
 <!-- 
-NOTES
+Le 1er concerne la gamification de l'application, avec une dominante design / dev notamment. 
+La 2nde concerne la création de contenu automatique (de flashcards) grâce à des LLMs, avec une dominante IA / dev.
+La 3ème concerne la création d'un prototype d'application mobile, avec un focus sur le dev / design.
+Enfin, le dernier concerne des sujets plus divers, comme la création de contenu, la gestion d'échéances, la gestion de l'import, le mode collaboratif (multijoueur), etc.
+Bien sûr la liste n'est pas exhaustive mais voici quelques sujets que j'ai identifié et qui pourraient être intéressants pour le projet. Si vous avez d'autres idées, n'hésitez vraiment pas à venir me voir pour en discuter.
 -->
 
 ---
@@ -206,3 +216,7 @@ Mail : saurel@protonmail.com
     <img src='/assets/qr-code-discord.png' width='270'/>
   </div>
 </div>
+
+<!-- 
+Merci à tous pour votre attention. N'hésitez pas à venir me voir pour en savoir plus sur le projet, pour discuter de vos idées ou pour échanger sur des sujets plus techniques. Vous pouvez me contacter via Discord ou par mail. Vous pouvez aussi tester l'application en scannant le QR code ou rejoindre le Discord dédié à memoire. Merci :)
+-->
